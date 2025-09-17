@@ -1,0 +1,6 @@
+from importlib import import_module
+
+app = import_module('app').app  # Assuming your Flask app is in app.py
+
+for rule in sorted(app.url_map.iter_rules(), key=lambda r: r.rule):
+    print(f"{rule.endpoint:20s} {rule.rule}")

@@ -1,0 +1,60 @@
+/* simple centered card with border and modern spacing */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f6f7fb;
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  min-height: 100vh;
+}
+
+.center-card {
+  background: #fff;
+  width: 360px;
+  margin-top: 40px;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(30,30,50,0.08);
+  border: 1px solid #e6e9ef;
+  text-align: center;
+}
+
+.center-card h1 { margin: 0 0 14px; font-size: 22px; color: #111; }
+
+.form { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+.form label { display: flex; flex-direction: column; text-align: left; font-size: 13px; color: #444; }
+.form input { padding: 10px 12px; border-radius: 6px; border: 1px solid #dfe4ee; margin-top: 6px; }
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 14px;
+  margin-top: 6px;
+  border: none;
+  border-radius: 8px;
+  background: #2b6ef6;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn.google {
+  background: #fff;
+  color: #333;
+  border: 1px solid #dfe4ee;
+  display: inline-block;
+  padding: 10px;
+}
+
+.divider { margin: 12px 0; color: #8b8f98; font-size: 13px; }
+
+.muted { color: #6b6f76; font-size: 13px; margin-top: 12px; }
+.flash-list { margin-bottom: 10px; text-align: left; }
+.flash { padding: 8px 10px; border-radius: 6px; margin-bottom: 6px; font-size: 13px; }
+.flash.success { background: #e6f4ea; color: #1b7a3a; border: 1px solid #cfeed6; }
+.flash.warning { background: #fff6e6; color: #9a6a00; border: 1px solid #ffe8b8; }
+.flash.danger { background: #fdecea; color: #8b1e1e; border: 1px solid #f7cfcf; }

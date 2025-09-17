@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Sign up - Tasty</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="center-card">
+    <h1>Create your Tasty account</h1>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flash-list">
+          {% for category, msg in messages %}
+            <div class="flash {{ category }}">{{ msg }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    <form method="post" action="{{ url_for('signup') }}" class="form">
+        <label>Username
+            <input type="text" name="username" required>
+        </label>
+        <label>Email
+            <input type="email" name="email" required>
+        </label>
+        <label>Password
+            <input type="password" name="password" required>
+        </label>
+        <button type="submit" class="btn">Sign up</button>
+    </form>
+
+    <div class="divider">or</div>
+
+    <a class="btn google" href="{{ url_for('google.login') }}">Sign up with Google</a>
+
+    <p class="muted">Already have an account? <a href="{{ url_for('login') }}">Log in</a></p>
+</div>
+</body>
+</html>

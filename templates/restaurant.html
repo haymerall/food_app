@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ Tasty}}</title>
+</head>
+<body>
+    <h1>{{ Tasty}}</h1>
+    <h2>Menu</h2>
+    <form method="post" action="{{ url_for('order') }}">
+        <input type="hidden" name="restaurant_id" value="{{ restaurant.id }}">
+        <ul>
+            {% for item in restaurant.menu %}
+            <li>
+                {{ item.name }} - ${{ item.price }}
+                <button type="submit" name="item_id" value="{{ item.id }}">Order</button>
+            </li>
+            {% endfor %}
+        </ul>
+    </form>
+    <a href="{{ url_for('home') }}">Back to Restaurants</a>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Orders</title>
+</head>
+<body>
+    <h1>Your Orders</h1>
+    <ul>
+        {% for order in orders %}
+        <li>{{ order.restaurant }}: {{ order.item }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('home') }}">Back to Home</a>
+</body>
+</html>

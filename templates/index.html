@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tasty</title>
+</head>
+<body>
+    <h1>Welcome to Tasty</h1>
+    <h2>Restaurants</h2>
+     <nav>
+    <ul>
+        {% for rest in restaurants %}
+        <li><a href="{{ url_for('restaurant', rest_id=rest.id) }}">{{ rest.name }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('orders_view') }}">View Orders</a>
+</body>
+</html>
